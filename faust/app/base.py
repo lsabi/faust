@@ -495,7 +495,7 @@ class App(AppT, Service):
         # such as Django integration).
         self.fixups = self._init_fixups()
 
-        self.boot_strategy = self.BootStrategy(self)
+        self.boot_strategy = self.BootStrategy(self, options)
 
         Service.__init__(self, loop=loop, beacon=beacon)
 
